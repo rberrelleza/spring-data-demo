@@ -1,0 +1,10 @@
+name: demo
+image: okteto/maven:3
+command: bash
+sync:
+- .:/usr/src/app
+forward:
+- 5005:5005
+- 8080:8080
+volumes:
+- /root/.m2

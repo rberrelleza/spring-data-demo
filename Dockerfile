@@ -11,5 +11,5 @@ RUN mvn package
 FROM openjdk:11-jre
 EXPOSE 8080
 WORKDIR /app
-COPY --from=build /app/target/*.jar .
+COPY --from=build /app/target /app
 CMD java -jar *.jar
